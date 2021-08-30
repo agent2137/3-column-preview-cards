@@ -1,0 +1,151 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+:root {
+    /*Primary*/
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /*Neutral*/
+    --Transparent-white/*(paragraphs)*/: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray/*(background, headings, buttons)*/: hsl(0, 0%, 95%);
+}
+
+h2 {
+    color: var(--Transparent-white);
+}
+
+p {
+    color: var(--Very-light-gray);
+}
+
+h2, p, img {
+    margin-bottom: 2rem;
+}
+
+a {
+    position: absolute;
+    bottom: 2rem;
+    border-radius: 25px;
+    padding: 1.5rem 3rem;
+    background-color: var(--Very-light-gray);
+    text-decoration: none;
+    border: solid 0.22rem var(--Very-light-gray);
+}
+
+.sedans > a{
+    color:var(--bright-orange);
+}
+
+.sedans > a:hover {
+    background-color: var(--bright-orange);
+    color: var(--Transparent-white);
+}
+
+.suvs > a{
+    color:var(--dark-cyan);
+}
+
+.suvs > a:hover {
+    background-color: var(--dark-cyan);
+    color: var(--Transparent-white);
+}
+
+.luxury > a{
+    color:var(--very-dark-cyan);
+}
+
+.luxury > a:hover {
+    background-color: var(--very-dark-cyan);
+    color: var(--Transparent-white);
+}
+
+.attribution {
+    position: absolute;
+    top: 0.5rem; 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+html {
+    background-color: var(--Very-light-gray);
+}
+
+body {
+    font-size: 15px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper > div {
+    position: relative;
+    padding: 2rem;
+    padding-bottom: 6rem;
+}
+
+.sedans {
+    margin-left: 1rem;
+    background-color: var(--bright-orange);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.suvs {
+    background-color: var(--dark-cyan);
+}
+
+.luxury {
+    margin-right: 1rem;
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+@media only screen and (min-width: 1200px){
+    body {
+        margin: 0 auto;
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 741px){
+    body { 
+        margin-top: 3rem;
+        margin-bottom: 14rem;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .wrapper > div {
+        margin-left: 1rem;
+        margin-right: 2rem;
+    }
+
+    .sedans {
+        margin-top: 11rem;
+        margin-left: 0;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .luxury {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+
+}
